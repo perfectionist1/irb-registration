@@ -91,7 +91,7 @@ label {
 @media (max-width: 576px) {
     .navbar-nav {
         right: 0;
-        margin-right: 0;
+        margin-right: 0;       
     }
     .form-container {
         padding: 15px;
@@ -106,12 +106,21 @@ label {
     .table {
         font-size: 0.9rem;
     }
+    .pos-left {
+        position: relative;
+        left: 60px;
+    }
+    .pos-right{
+        position: relative;
+        right: -40px;
+    }
 }
 
 /* Tablets (min-width: 577px) */
 @media (min-width: 577px) and (max-width: 768px) {
     .navbar-nav {
         right: 30px;
+       
     }
     .form-container {
         padding: 20px;
@@ -119,12 +128,21 @@ label {
     .form-title, .section-title {
         font-size: 1.3rem;
     }
+    .pos-left {
+        position: relative;
+        left: 60px;
+    }
+    .pos-right{
+        position: relative;
+        right: -40px;
+    }
 }
 
 /* Laptops (min-width: 769px) */
 @media (min-width: 769px) and (max-width: 992px) {
     .navbar-nav {
         right: 50px;
+        padding-left: 30px;
     }
     .form-title, .section-title {
         font-size: 1.4rem;
