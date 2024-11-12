@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRB Registration | BMRC</title>
+	<link href="css/styles.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Register Button with Modal Trigger -->
+    <!-- <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#submissionModal">Register</button> -->
+
+    <!-- Submission Number Modal -->
+    <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="submissionModalLabel">Provide the number for Registration Page</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="submissionForm">
+                        <div class="form-group">
+                            <label for="submissionNumber">Submission Number</label>
+                            <input type="text" class="form-control" id="submissionNumber" maxlength="6" placeholder="Enter 6-digit number" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="checkSubmission()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+			<a class="navbar-brand" href="#">
+				<img src="images/bd-gov.png" alt="Logo Left" class="logo-left pos-left"> <!-- First logo on the left -->
+			</a>
+			<div class="position-absolute" style="left: 50%; transform: translateX(-50%);">
+				<a class="navbar-brand" href="https://bmrcbd.org/">
+					<img src="images/bmrc-logo.png" alt="Logo Center" class="logo-center"> <!-- Second logo centered -->
+				</a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="downloads/Manual-on-IRB.pdf">Guidelines</a></li>
+					<li class="nav-item"><a class="nav-link" href="downloads/SOPs.pdf">SOP</a></li>
+					<li class="nav-item" ><a class="nav-link" data-toggle="modal" data-target="#submissionModal" href="register.html">Register</a></li>
+					<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+    
+    <!-- Hero Section -->
+    <header class="welcome-bg-color text-white text-center py-5">
+        <div class="container py-5 my-5 welcome-bg-color">
+            <h1>Welcome to IRB Registration | BMRC</h1>
+            <p class="lead">Your gateway to ethical research compliance in Bangladesh</p>
+            <!-- Learn More Button triggers Modal -->
+            <button class="btn btn-light mt-3" data-toggle="modal" data-target="#learnMoreModal">Learn More about BMRC Mandate</button>
+        </div>
+    </header>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="learnMoreModal" tabindex="-1" aria-labelledby="learnMoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="learnMoreModalLabel">Background</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bangladesh Medical Research Council (BMRC) is the apex organization for health research in the country. The aims and objectives of BMRC are to improve, organize, and conduct scientific research in various fields of medicine, public health, and family planning (BMRC resolution 1976).</p>
+                    <p>There are Institutional Review Boards (IRBs) exist in different institutions/organizations to review and approve scientific research protocols, theses, and dissertations. However, the composition, Standard Operating Procedure (SOP), and functionalities of IRBs vary among institutions. According to the mandate of BMRC <span class="font-weight-bold">(Clause 4 of role of BMRC under chapter 04 of National Health Research Strategy approved by Ministry of Health and Family Welfare, Memo No: MOHFW/Hospital-2/Misc.-16/07/06, Date: 05 January, 2009) </span>, a strong coordination and monitoring mechanism under a regulatory framework needs to develop between IRB of different institutions and BMRC.</p>
+					<p> This Registration Guideline has been developed for collecting comprehensive information on health research conducted in Bangladesh to ensure the quality and uniformity of the ethical review process. </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+	<!-- Submission Number Info Section -->
+    <section class="bg-light">
+        <div class="container">
+            <div class="row pt-5 mb-5 pb-5">
+                <!-- Search for IRBs (Centered) -->
+                <div class="col-md-12 text-center mb-5 mt-5">
+                    <h4>Search for IRBs</h4>
+                    <input type="text" class="form-control w-50 mx-auto" placeholder="Search IRB institutes...">
+                    <button class="btn btn-primary mt-2">Search</button>
+                </div>
+            </div>
+		</div>
+    </section>
+   
+    <section class="extra-space-section">
+        <div class="container">            
+            <div class="row">
+                <!-- Downloadable Guidelines -->
+                <div class="col-md-4 text-center">
+                    <h4>Download Guidelines</h4>
+                    <p>Access downloadable IRB guidelines for institutions.</p>
+                    <a href="downloads/Manual-on-IRB.pdf" class="btn btn-primary">Download</a>
+                </div>
+                <!-- Downloadable SOP -->
+                <div class="col-md-4 text-center">
+                    <h4>Download SOP</h4>
+                    <p>Standard Operating Procedures for IRB registrations.</p>
+                    <a href="downloads/SOPs.pdf" class="btn btn-primary">Download SOP</a>
+                </div>
+                <!-- Registration & Login Buttons -->
+                <div class="col-md-4 text-center">
+                    <h4>Account Access</h4>
+                    <button class="btn btn-secondary mb-2"> <a class="text-white" data-toggle="modal" data-target="#submissionModal" href="register.html"> Register </a> </button>
+                    <button class="btn btn-success mb-2" onclick="location.href='login.html'">Login</button>
+                    <button class="btn btn-info" onclick="location.href='submission-num.html'">Request Submission Number</button>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Submission Number Info Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h3 class="text-center mb-4">Automated Email with Submission Number</h3>
+            <p class="text-center"><span class="text-success"> Upon Submission Number Request, you will receive an automated email with a submission number valid for 90 days.</span> <span class="font-weight-bold"> Contact BMRC</span> <span class="text-danger"> if you do not receive confirmation within 24 hours.</span></p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Bangladesh Medical Research Council | IRB Registration</p>
+    </footer>
+    
+    <script src="js/mod.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

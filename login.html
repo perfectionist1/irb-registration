@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BMRC IRB</title>
+	<link href="css/styles.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Register Button with Modal Trigger -->
+    <!-- <button class="btn btn-secondary mb-2" data-toggle="modal" data-target="#submissionModal">Register</button> -->
+
+    <!-- Submission Number Modal -->
+    <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="submissionModalLabel">Provide the number for Registration Page</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="submissionForm">
+                        <div class="form-group">
+                            <label for="submissionNumber">Submission Number</label>
+                            <input type="text" class="form-control" id="submissionNumber" maxlength="6" placeholder="Enter 6-digit number" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="checkSubmission()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+			<a class="navbar-brand" href="#">
+				<img src="images/bd-gov.png" alt="Logo Left" class="logo-left pos-left"> <!-- First logo on the left -->
+			</a>
+			<div class="position-absolute" style="left: 50%; transform: translateX(-50%);">
+				<a class="navbar-brand" href="https://bmrcbd.org/">
+					<img src="images/bmrc-logo.png" alt="Logo Center" class="logo-center"> <!-- Second logo centered -->
+				</a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="downloads/Manual-on-IRB.pdf">Guidelines</a></li>
+					<li class="nav-item"><a class="nav-link" href="downloads/SOPs.pdf">SOP</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#submissionModal" href="register.html">Register</a></li>					
+					<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+    <!-- Login Section -->
+    <div class="container my-5">
+        <h2 class="text-center">Login to Your Account</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="window.location.href='user.html'">Login</button>
+                    <p class="text-center mt-3">Don’t have an account? <a data-toggle="modal" data-target="#submissionModal" href="register.html">Register</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+	<!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Bangladesh Medical Research Council | IRB Registration</p>
+    </footer>
+    <script src="js/mod.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

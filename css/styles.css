@@ -1,0 +1,145 @@
+/* General Styles */
+.required-asterisk {
+    color: red;
+    font-weight: bold;
+}
+.required-field {
+    border-color: red !important;
+}
+
+/* Navbar Styles */
+.navbar-nav {
+    position: relative;
+    right: 70px;
+    margin-right: 40px;
+}
+.navbar-nav .nav-link {
+    color: #333;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+.logo-left, .logo-center {
+    max-height: 50px;
+}
+
+/* Section Spacing */
+.extra-space-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.pos-left {
+    position: relative;
+    left: 200px;
+}
+.welcome-bg-color {
+    background-color: #1A4480;
+}
+
+/* Page Background */
+.body-bg {
+    background-color: #f5f5f5;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Dashboard Section Title */
+.section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Modal Button Styling */
+.table td, .table th {
+    vertical-align: middle;
+}
+
+/* 
+:::::::::::::::::::::::::::::::::::::::
+    >>>>> Media Queries <<<<<<
+:::::::::::::::::::::::::::::::::::::::
+*/
+
+/* Mobile devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .navbar-nav {
+        right: 0;
+        margin-right: 0;
+    }
+    .form-container {
+        padding: 15px;
+    }
+    .form-title, .section-title {
+        font-size: 1.2rem;
+    }
+    .extra-space-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets (min-width: 577px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar-nav {
+        right: 30px;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .form-title, .section-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Laptops (min-width: 769px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .navbar-nav {
+        right: 50px;
+    }
+    .form-title, .section-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Desktops (min-width: 993px) */
+@media (min-width: 993px) {
+    .navbar-nav {
+        right: 70px;
+    }
+    .form-container {
+        padding: 30px;
+    }
+    .form-title, .section-title {
+        font-size: 1.5rem;
+    }
+}

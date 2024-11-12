@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account | IRB</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
+</head>
+<body class="body-bg"> 
+    <!-- Updated Navigation Bar with Profile Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative">
+        <a class="navbar-brand" href="#">
+            <img src="images/bd-gov.png" alt="Logo Left" class="logo-left pos-left">
+        </a>
+        <div class="position-absolute" style="left: 50%; transform: translateX(-50%);">
+            <a class="navbar-brand" href="https://bmrcbd.org/">
+                <img src="images/bmrc-logo.png" alt="Logo Center" class="logo-center">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Profile Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/profile.svg" alt="Profile Icon" style="width: 30px; height: 30px; border-radius: 50%;">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Help</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center mb-4 mt-5">User Account Dashboard</h2>
+        
+        <!-- User Account Options -->
+        <div class="section-title">Account Settings</div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">User Account Details</h5>
+                <p class="card-text">Manage your account credentials, password, and recovery options.</p>
+                <button class="btn btn-primary" onclick="openPasswordModal()">Update Password</button>
+            </div>
+        </div>
+
+        <!-- IRB Members Table -->
+        <div class="section-title">IRB Members</div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>SL No.</th>
+                            <th>Name</th>
+                            <th>Designation & Dept.</th>
+                            <th>Mobile</th>
+                            <th>Professional Qualification</th>
+                            <th>Affiliation</th>
+                            <th>Duration</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample Row for IRB Members -->
+                        <tr>
+                            <td>1</td>
+                            <td>Dr. John Kabir</td>
+                            <td>Professor, Dept. of Medicine</td>
+                            <td> 0123456789 </td>
+                            <td>PhD in Medicine</td>
+                            <td>Yes</td>
+                            <td>3 Years</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="openEditMemberModal()">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dr. John Kabir</td>
+                            <td>Professor, Dept. of Medicine</td>
+                            <td> 0123456789 </td>
+                            <td>PhD in Medicine</td>
+                            <td>Yes</td>
+                            <td>3 Years</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="openEditMemberModal()">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Dr. John Kabir</td>
+                            <td>Professor, Dept. of Medicine</td>
+                            <td> 0123456789 </td>
+                            <td>PhD in Medicine</td>
+                            <td>Yes</td>
+                            <td>3 Years</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="openEditMemberModal()">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Dr. John Kabir</td>
+                            <td>Professor, Dept. of Medicine</td>
+                            <td> 0123456789 </td>
+                            <td>PhD in Medicine</td>
+                            <td>Yes</td>
+                            <td>3 Years</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="openEditMemberModal()">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Dr. John Kabir</td>
+                            <td>Professor, Dept. of Medicine</td>
+                            <td> 0123456789 </td>
+                            <td>PhD in Medicine</td>
+                            <td>Yes</td>
+                            <td>3 Years</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="openEditMemberModal()">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Dr. John Kabir</td>
+                            <td>Professor, Dept. of Medicine</td>
+                            <td> 0123456789 </td>
+                            <td>PhD in Medicine</td>
+                            <td>Yes</td>
+                            <td>3 Years</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="openEditMemberModal()">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Dr. John Kabir</td>
+                            <td>Professor, Dept. of Medicine</td>
+                            <td> 0123456789 </td>
+                            <td>PhD in Medicine</td>
+                            <td>Yes</td>
+                            <td>3 Years</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="openEditMemberModal()">Edit</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="section-title">Downloads</div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Reports</h5>
+                <p class="card-text">Necessary documents and reports.</p>
+                <a href="downloads/Annual_Report_AnnexureD.pdf" class="btn btn-primary">Annual Report (Annexure-D)</a>
+                <a href="downloads/Problem_Report_AnnexureE.pdf" class="btn btn-primary ml-2">Problem Report (Annexure-E)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Update Modal -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passwordModalLabel">Update Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" class="form-control" id="currentPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirmNewPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Member Modal -->
+    <div class="modal fade" id="editMemberModal" tabindex="-1" aria-labelledby="editMemberModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editMemberModalLabel">Edit IRB Member Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="memberName">Name</label>
+                            <input type="text" class="form-control" id="memberName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="memberDesignation">Designation & Dept.</label>
+                            <input type="text" class="form-control" id="memberDesignation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="memberDesignation">Mobile</label>
+                            <input type="text" class="form-control" id="memberMobile" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="memberQualification">Professional Qualification</label>
+                            <input type="text" class="form-control" id="memberQualification" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="memberAffiliation">Affiliation (Yes/No)</label>
+                            <select class="form-control" id="memberAffiliation" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="memberDuration">Duration in IRB</label>
+                            <input type="text" class="form-control" id="memberDuration" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Bangladesh Medical Research Council | IRB Registered Institute</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Functions to open modals
+        function openPasswordModal() {
+            $('#passwordModal').modal('show');
+        }
+        
+        function openEditMemberModal() {
+            $('#editMemberModal').modal('show');
+        }
+    </script>
+</body>
+</html>
